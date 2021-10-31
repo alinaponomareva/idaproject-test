@@ -1,0 +1,32 @@
+
+//- form.portfolio__form(name="portfolioForm" id="portfolioForm")
+    .portfolio__select-wrapper.select__wrapper
+        .portfolio__pseudo-select(data-master="portfolioSelect").select__pseudo
+            .select__pseudo-input
+                span Фильтр по продукции
+
+            .select__pseudo-dropdown
+                ul.select__pseudo-list
+
+        .portfolio__true-select.select__true
+            select(name="portfolioSelect").selectHidden(data-slave="portfolioSelect")
+                option(value="") Вся продукция
+                option(value="labels") Образцы этикеток
+
+//- .products__select
+    .products__sorting-wrapper.select__wrapper
+        .products__pseudo-select.select__pseudo(data-master="sortingSelect")
+            .select__pseudo-input
+                span 
+
+            .select__pseudo-dropdown
+                ul.select__pseudo-list
+
+        .products__true-select.select__true
+            select(name="sortingSelect").selectHidden(data-sub="sortingSelect")
+                option(value="" selected) По умолчанию
+                option(value="ascending") По возрастанию
+                option(value="descending") По убыванию
+
+
+div#select

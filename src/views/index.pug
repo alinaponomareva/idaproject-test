@@ -1,0 +1,62 @@
+extends templates/main
+
+block content
+
+    section.products
+        .container 
+            h1.visually-hidden Страница товаров
+
+            .products__inner
+                .products__form-block 
+                    h2.products__form-title Добавление товара
+                    form(id="addProductForm" method="POST" action="")
+                        .products__input-row.input-row.input-row--required
+                            input(type="text" id="productTitle" name="productTitle" placeholder="Введите наименование товара").products__input
+                            label(for="productTitle").products__label Наименование товара
+                        .products__input-row.input-row 
+                            textarea(id="productDescription" name="productDescription" placeholder="Введите описание товара" rows="5").products__input
+                            label(for="productDescription").products__label Описание товара
+                        .products__input-row.input-row.input-row--required 
+                            input(type="text" id="productImage" name="productText" placeholder="Введите ссылку").products__input
+                            label(for="productImage").products__label Ссылка на изображение товара
+                        .products__input-row.input-row.input-row--required
+                            input(type="text" id="productPrice" name="productPrice" placeholder="Введите цену").products__input.rls
+                            label(for="productPrice").products__label Цена товара
+                        button(type="submit" id="addProductBtn").btn Добавить товар
+                        
+                .products__main
+
+                    .products__sorting 
+                        include components/products-sorting
+
+                    .products__list 
+                        include components/products-item 
+                            block variables
+                                - var price = "10 000";
+                                - var title = "Product 7";
+                                
+                        include components/products-item 
+                            block variables
+                                - var price = "4 000";
+                                - var title = "Product 2";
+                                
+                        include components/products-item 
+                            block variables
+                                - var price = "5 000";
+                                - var title = "Product 3";
+                                
+                        include components/products-item
+                            block variables
+                                - var price = "15 000"; 
+                                - var title = "Product 6";
+                                
+                        include components/products-item
+                            block variables
+                                - var price = "2 000"; 
+                                - var title = "Product 9";
+                                
+                        include components/products-item 
+                            block variables
+                                - var price = "50 000";
+                                - var title = "Product 1";
+                                

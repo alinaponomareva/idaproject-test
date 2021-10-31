@@ -1,0 +1,7 @@
+.products__main {
+  flex-grow: 1;
+  
+  @media(min-width: 1300px) {
+    width: 75.5%;
+  }
+}

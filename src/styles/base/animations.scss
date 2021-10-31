@@ -1,0 +1,12 @@
+@keyframes fadeInTop {
+  from {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
